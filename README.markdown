@@ -5,16 +5,16 @@ The FlashMessage bundle is a basic script that allows you to show typical brief
 success or error messages after a user action. This plugin comes with four pre-styled message 
 types: 'success', 'notice', 'warning' and 'error'. 
 
-    Features:
+Features:
     
-     * renders the standard Symfony session component flash messages.
-     * a twig extension making it easy to show manual messages if you want to.
-     * a javascript interface enabling you to show flash messages without reloading.
+ * renders the standard Symfony session component flash messages.
+ * a twig extension making it easy to show manual messages if you want to.
+ * a javascript interface enabling you to show flash messages without reloading.
  
-    Dependencies:
+Dependencies:
     
-     * Symfony session component
-     * jQuery 1.4.2 (other versions are likely to work as well)
+ * Symfony session component
+ * jQuery 1.4.2 (other versions are likely to work as well)
 
 Features & usage
 ----------------
@@ -59,24 +59,18 @@ Installation
 
   5. Add the following files to the <head></head> of your main template:
 
-        ```text
         <link rel="stylesheet" href="{{ asset('bundles/iceflashmessage/css/jquery.flashMessage.css') }}" type="text/css" media="all" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="{{ asset('bundles/iceflashmessage/js/jquery.flashMessage.js') }}"></script>
-        ```
 
   6. Install assets from the command line:
 
-        ```text
         php app/console assets:install web --symlink
-        ```
 
   7. Call twig function where you want to show the flash messages: 
 
-        ```text
         # bundle/Resources/views/template.html.twig
         {{ showFlashMessages() }}
-        ```
 
 ### Creating a flash message
 
@@ -87,29 +81,23 @@ message's enclosing div.
 By default all messages passed to the session are rendered by the FlashMessage bundle. To add 
 a flash message you can use the Symfony session service:
 
-        ```php
-        # bundle/Controller/MyController.php
-        $this->get('session')->setFlash('success', 'Your pattern has been created');
-        ```
+    # bundle/Controller/MyController.php
+    $this->get('session')->setFlash('success', 'Your pattern has been created');
 
 This method makes sure the message is displayed after a page request. If you want to show it
 immediately you can render a flash message in the template directly like so:
 
-        ```text
-        # bundle/Resources/views/template.html.twig
-        {{ flash('success', 'Thank you, your settings were updated!') }}
-        ```
+    # bundle/Resources/views/template.html.twig
+    {{ flash('success', 'Thank you, your settings were updated!') }}
 
 Alternatively you can render a flash message in javascript after for example an ajax request:
  
-        ```javascript
-        # bundle/Resources/views/template.html.twig
-        <script language="javascript">
-        $(function () {
-            $.flash({ type: "success", message: "Thank you, your settings were updated!" });  
-        });
-        </script>
-        ```
+    # bundle/Resources/views/template.html.twig
+    <script language="javascript">
+    $(function () {
+        $.flash({ type: "success", message: "Thank you, your settings were updated!" });  
+    });
+    </script>
 
 jQuery Flash parameters
 -----------------------
