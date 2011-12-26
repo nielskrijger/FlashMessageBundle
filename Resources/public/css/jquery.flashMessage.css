@@ -1,0 +1,32 @@
+#flashmessages {
+	display: none;
+}
+#flashmessages>div {
+    display: none;
+    border: 1px solid;
+    margin: 3px 0px;
+    padding: 3px 10px 3px 28px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    font-size: 125%;
+}
+#flashmessages .notice {
+    border-color: #00529B;
+    background-color: #BDE5F8;
+    background-image: url('../images/notice.png');
+}
+#flashmessages .success, .fos_user_success {
+    border-color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../images/success.png');
+}
+#flashmessages .warning {
+    border-color: #9F6000;
+    background-color: #FFFABF;
+    background-image: url('../images/warning.png');
+}
+#flashmessages .error {
+    border-color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('../images/error.png');
+}
