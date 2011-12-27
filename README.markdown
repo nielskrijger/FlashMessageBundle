@@ -54,7 +54,7 @@ Installation
 
         ice_flash_message: ~
 
-  5. Add the following files to the <head></head> of your main template:
+  5. Add the following files to the headof your main template:
 
         <link rel="stylesheet" href="{{ asset('bundles/iceflashmessage/css/jquery.flashMessage.css') }}" type="text/css" media="all" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
