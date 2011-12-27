@@ -59,7 +59,7 @@ class FlashMessageExtension extends \Twig_Extension
     protected function renderFlashJavascript($messages) 
     {
         $return = "";
-        if (count($this->session->getFlashes()) > 0) {
+        if (count($messages) > 0) {
             $return .= '<script language="javascript">$(function () {';
             foreach ($messages as $type => $message) {
                 $return .= '$.flash({ type: "' . addslashes($type) . '", message: "' . addslashes($message) . '" });';

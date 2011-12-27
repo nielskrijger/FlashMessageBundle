@@ -19,9 +19,8 @@ jQuery.flash = function(settings) {
 		var messageDiv = $("#" + messageDivId);
 		
 		var bar = jQuery("<div/>", {
-			className: type,
 			text: message
-		});
+		}).addClass(type);
 		
 		messageDiv.prepend(bar);
 		messageDiv.css('display', 'block');

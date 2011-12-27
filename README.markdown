@@ -24,12 +24,12 @@ Installation
     Add the following lines in your ``deps`` file:
 
         [ICEFlashMessageBundle]
-            git=git://github.com/nielskrijger/ICEFlashMessageBundle.git
-            target=/bundles/nielskrijger/ICEFlashMessageBundle
+            git=git://github.com/nielskrijger/FlashMessageBundle.git
+            target=/bundles/ICE/FlashMessageBundle
 
     Run the vendors script:
 
-        ./bin/vendors install
+        php bin/vendors install
 
   2. Add the ICE namespace to your autoloader:
 
@@ -60,11 +60,7 @@ Installation
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="{{ asset('bundles/iceflashmessage/js/jquery.flashMessage.js') }}"></script>
 
-  6. Install assets from the command line:
-
-        php app/console assets:install web --symlink
-
-  7. Call twig function where you want to show the flash messages: 
+  6. Call twig function where you want to show the flash messages: 
 
         # bundle/Resources/views/template.html.twig
         {{ showFlashMessages() }}
