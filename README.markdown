@@ -76,23 +76,23 @@ message's enclosing div.
 By default all messages passed to the session are rendered by the FlashMessage bundle. To add 
 a flash message you can use the Symfony session service:
 
-    # bundle/Controller/MyController.php
-    $this->get('session')->setFlash('success', 'Well done! You\'ve been initialized');
+        # bundle/Controller/MyController.php
+        $this->get('session')->setFlash('success', 'Well done! You\'ve been initialized');
 
 The symfony session service renders the message after a new page request. If you want to show a
 flash message immediately you can render it in the template directly:
 
-    # bundle/Resources/views/template.html.twig
-    {{ flash('success', 'Scotty has beamed you up!') }}
+        # bundle/Resources/views/template.html.twig
+        {{ flash('success', 'Scotty has beamed you up!') }}
 
 Alternatively you can render a flash message in javascript after for example an ajax request:
  
-    # bundle/Resources/views/template.html.twig
-    <script language="javascript">
-    $(function () {
-        $.flash({ type: "success", message: "You are a success!" });  
-    });
-    </script>
+        # bundle/Resources/views/template.html.twig
+        <script language="javascript">
+        $(function () {
+            $.flash({ type: "success", message: "You are a success!" });  
+        });
+        </script>
 
 jQuery Flash parameters
 -----------------------
