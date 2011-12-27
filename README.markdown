@@ -54,11 +54,13 @@ Installation
 
         ice_flash_message: ~
 
-  5. Add the following files to the headof your main template:
+  5. Add the following files to the head of your main template:
 
         <link rel="stylesheet" href="{{ asset('bundles/iceflashmessage/css/jquery.flashMessage.css') }}" type="text/css" media="all" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="{{ asset('bundles/iceflashmessage/js/jquery.flashMessage.js') }}"></script>
+
+    Instead of asset() you might want to use assetic here, see Symfony's documentation how to.
 
   6. Call twig function where you want to show the flash messages: 
 
