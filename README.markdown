@@ -13,8 +13,7 @@ Features:
  
 Dependencies:
     
- * Symfony session component
- * jQuery 1.4.2 (other versions are likely to work as well)
+ * jQuery (tested with version 1.4.2 and 1.6.4)
 
 Installation
 ------------
@@ -57,7 +56,7 @@ Installation
   5. Add the following files to the head of your main template:
 
         <link rel="stylesheet" href="{{ asset('bundles/iceflashmessage/css/jquery.flashMessage.css') }}" type="text/css" media="all" />
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="{{ asset('bundles/iceflashmessage/js/jquery.flashMessage.js') }}"></script>
 
     Instead of asset() you might want to use assetic here, see Symfony's documentation how to.
